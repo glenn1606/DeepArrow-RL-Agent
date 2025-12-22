@@ -47,7 +47,7 @@ Tips:
 - You need enough mana (≥ 30) to shoot.
 - Wind and gravity alter the trajectory.
 
-## Environment API (Gymnasium)
+## Environment
 - Action space: Box(low=[0,10,0], high=[90,50,1], dtype=float64)
   - angle_deg ∈ [0, 90]
   - power ∈ [10, 50]
@@ -64,10 +64,6 @@ Tips:
   - terminated: all targets destroyed
   - truncated: time runs out or arrows run out
 
-Reproducibility:
-```python
-obs, info = env.reset(seed=42)
-```
 
 ## Rewards (Bring Your Own)
 This environment does not return reward. Use a wrapper to compute it from info/step_info. Example sketch:

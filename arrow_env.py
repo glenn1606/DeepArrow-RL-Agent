@@ -533,7 +533,6 @@ class ArrowEnv(gym.Env):
         pygame.event.pump()
         self.clock.tick(self.metadata["render_fps"])
         
-    
     def _draw_hud(self):
         """Draw HUD overlay"""
         # Mana bar
