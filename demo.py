@@ -6,7 +6,7 @@ Cho phép chơi manual hoặc xem agent hoạt động
 
 import numpy as np
 import pygame
-from arrow_env import ArrowEnv
+from envs.arrow_env import ArrowEnv
 import time
 from pprint import pprint, pformat
 
