@@ -50,7 +50,7 @@ class Arrow:
     active: bool = True
 
 
-class ArrowEnv(gym.Env):
+class ArrowShootingEnv(gym.Env):
     """
     Arrow Shooting Environment for Deep Reinforcement Learning
     

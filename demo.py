@@ -6,7 +6,7 @@ Cho phép chơi manual hoặc xem agent hoạt động
 
 import numpy as np
 import pygame
-from envs.arrow_env import ArrowEnv
+from envs.arrow_env import ArrowShootingEnv
 import time
 from pprint import pprint, pformat
 
@@ -32,7 +32,7 @@ def manual_control_demo():
     print("="*70)
     
     # Create environment
-    env = ArrowEnv(render_mode="human")
+    env = ArrowShootingEnv(render_mode="human")
     
     observation, info = env.reset()
     env.render()
