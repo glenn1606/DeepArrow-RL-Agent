@@ -54,7 +54,7 @@ class Trainer:
     def train(self):
         """Main training loop"""
         print("=" * 60)
-        print("🎯 Starting DeepArrow DDQN Training")
+        print(" Starting DeepArrow DDQN Training")
         print("=" * 60)
         print(f"Episodes: {self.num_episodes}")
         print(f"Device: {self.agent.device}")
@@ -98,7 +98,7 @@ class Trainer:
                 if eval_reward > self.best_eval_reward:
                     self.best_eval_reward = eval_reward
                     self.save_checkpoint('model_best.pth', episode, eval_reward)
-                    print(f"✅ New best model! Eval reward: {eval_reward:.2f}")
+                    print(f" New best model! Eval reward: {eval_reward:.2f}")
             
             # Periodic checkpoint
             if (episode + 1) % 500 == 0:
@@ -108,7 +108,7 @@ class Trainer:
         self.save_checkpoint('model_final.pth', self.num_episodes, self.episode_rewards[-1])
         
         print("\n" + "=" * 60)
-        print("✅ Training Complete!")
+        print(" Training Complete!")
         print(f"Best Eval Reward: {self.best_eval_reward:.2f}")
         print(f"Final Epsilon: {self.agent.epsilon:.4f}")
         print("=" * 60)
@@ -248,11 +248,11 @@ def main():
     try:
         trainer.train()
     except KeyboardInterrupt:
-        print("\n⚠️  Training interrupted by user")
+        print("\n  Training interrupted by user")
         trainer.save_checkpoint('model_interrupted.pth', len(trainer.episode_rewards), 
                               trainer.episode_rewards[-1] if trainer.episode_rewards else 0)
     
-    print("\n🎉 Done!")
+    print("\n Done!")
 
 
 if __name__ == '__main__':
